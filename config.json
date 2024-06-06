@@ -1,0 +1,99 @@
+{
+  "MultiViewModel": {
+    "fusion_layer":[1,1],
+    "mlp_dims":3072,
+    "mlp_dropout":0.1,
+    "num_heads":[4,4,4],
+    "num_layers":[4,4,4],
+    "atten_dropout":0.0,
+    "embedding_dims":[1024,1536,2048],
+    "paras_for_global_encoder":{
+      "embedding_dims":1024,
+      "mlp_dims":768,
+      "num_heads":8,
+      "atten_dropout":0.0,
+      "mlp_dropout":0.1
+    }
+    
+  },
+
+  "SkeletonModel": {
+ "mlp_dims":512,
+ "mlp_dropout":0.1,
+ "atten_dropout":0.0,
+ "embedding_dims":192,
+ "num_heads":8,
+ "num_layers":4,
+ "depths": 16,
+ "channels":7,
+ "keypoints":22
+  },
+  "Overclasificationencoder":{
+    "atten_dropout":0.0,
+    "num_heads":8,
+    "mlp_dim":768,
+    "mlp_dropout":0.1,
+    "embedding_dims":1024
+  },
+  "view_number":[2,4,8],
+  "class_label": {
+    "Others": 0,
+    "Place Carrier": 1,
+    "Place Gear Bearings": 2,
+    "Place Planet Gears": 3,
+    "Place Carrier Shaft": 4,
+    "Place Sun Shaft": 5,
+    "Place Sun Gear": 6,
+    "Place Sun Gear Bearing": 7,
+    "Place Ring Bear": 8,
+    "Pick up Block 2 and place it on Block 1": 9,
+    "Place Cover": 10,
+    "Place Screws": 11,
+    "Place Allen Key, Turn Screws, Return Allen Key and EGT": 12
+  },
+  "d_model": [192, 768, 1280],
+  "dropout_sa": [0.1, 0.1, 0.1],
+  "dropout_ff": [0.1, 0.1, 0.1],
+  "global_encoder": {
+    "d_model": 128,
+    "mlp_dim": 768,
+    "n_head": 2,
+    "dropout": 0.2,
+    "n_layer": 6,
+    "d_ff": 512
+  },
+  "label_path": "E:\\PHD\\14_Code\\SelfAttention_ActionRecognition\\IDU001V008\\IDU001V008\\Labels.txt",
+  "mlp_dims": [768, 3072, 4096],
+  "model_size_order": [
+    "Ti",
+    "S",
+    "B",
+    "L",
+    "H"
+  ],
+  "num_head": [3, 12, 16],
+  "num_layer": {
+    "Ti": 12,
+    "B": 12,
+    "L": 24
+  },
+  "path": {
+    "Skeleton_path": "E:/PHD/14_Code/SelfAttention_ActionRecognition/IDU001V008/IDU001V008/Skeletons/000124702712",
+    "RGB_path": "E:/PHD/14_Code/SelfAttention_ActionRecognition/IDU001V008/IDU001V008/Color/000124702712"
+  },
+  "reduce_keypoints": {
+    "start": 18,
+    "end": 28
+  },
+  "temporal_dim": [
+    2,
+    4,
+    8
+  ],
+  "view_token": [
+    "Ti",
+    "B",
+    "L"
+  ],
+  "Batch_size": 16
+}
